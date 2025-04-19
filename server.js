@@ -106,7 +106,8 @@ function start() {
 	var port = settings.getServerSettings().port;
 
 	server.listen(port, function() {
-		console.log('EmuTarkov listening on: %s', port);
+		console.log('\x1b[32m%s\x1b[0m', 'ARP server open on port', port);
+		console.log('-------------------------'); 
 	});
 	
 	server.on('request', function(req, resp) {
